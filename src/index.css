@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.neon-text {
+  text-shadow: 
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(168 85 247),
+    0 0 82px rgb(168 85 247),
+    0 0 92px rgb(168 85 247),
+    0 0 102px rgb(168 85 247),
+    0 0 151px rgb(168 85 247);
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px rgb(168 85 247),
+      0 0 82px rgb(168 85 247),
+      0 0 92px rgb(168 85 247),
+      0 0 102px rgb(168 85 247),
+      0 0 151px rgb(168 85 247);
+  }
+  20%, 24%, 55% {       
+    text-shadow: none;
+  }
+}
